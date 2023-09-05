@@ -1,9 +1,3 @@
 #!/usr/bin/python3
 for number in range(0, 100):
-	if (number != 99):
-		if (number < 10):
-			print("0{}".format(number), end = ", ")
-		else:
-			print("{}".format(number), end = ", ")
-	else:
-		print("{}".format(number))
+    print("{:02d}".format(number), end="\n" if number == 99 else ", ")
