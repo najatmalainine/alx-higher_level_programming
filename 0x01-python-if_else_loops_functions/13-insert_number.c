@@ -9,6 +9,8 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node;
+	listint_t *current = *head;
+	
 	/* Create a new node with the given number */
 	new_node = malloc(sizeof(listint_t));
 
@@ -29,7 +31,8 @@ listint_t *insert_node(listint_t **head, int number)
 
 	/* Traverse the list to find the */
 	/*appropriate position to insert the new node */
-	listint_t *current = *head;
+
+
 
 	while (current->next != NULL && current->next->n < number)
 	{
