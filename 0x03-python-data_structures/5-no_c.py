@@ -5,3 +5,7 @@ def no_c(my_string):
         if char != 'c' and char != 'C':
             new_string += char
     return new_string
+
+# ------- Another Method -----------
+# def no_c(my_string):
+# return ("".join(c for c in my_string if c not in "Cc"))
