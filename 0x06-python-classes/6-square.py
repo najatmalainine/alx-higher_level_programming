@@ -42,10 +42,9 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        if self.size == 0:
-            print()
+        if self.__size == 0:
+            print("")
         else:
-            for i in range(self.size):
-                if self.__position[1] > 0:
-                    print(" " * self.__position[1], end="")
-                print("#" * self.size)
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] + "#" * self.__size
+                    for rows in range(self.__size)]))
