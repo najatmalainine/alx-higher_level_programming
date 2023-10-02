@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-Module 0-square
-Defines class Square
+Defining an empty class Rectangle
 """
 
 
-class Square:
+class Rectangle:
     """Empty class"""
     pass
