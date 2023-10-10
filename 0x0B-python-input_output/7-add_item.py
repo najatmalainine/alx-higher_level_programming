@@ -7,7 +7,6 @@ from sys import argv
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-arguments = list(argv[1:])
 filename = "add_item.json"
 
 try:
@@ -15,5 +14,4 @@ try:
 except Exception:
     old_data = []
 
-old_data.extend(arguments)
-save_to_json_file(old_data, filename)
+save_to_json_file(old_data + argv[1:], filename)
