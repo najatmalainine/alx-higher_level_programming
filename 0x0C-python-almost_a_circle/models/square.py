@@ -3,7 +3,7 @@
 from models.rectangle import Rectangle
 
 
-class Rectangle(Rectangle):
+class Square(Rectangle):
     """Class representing Rectangle that inherits from Base"""
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor"""
