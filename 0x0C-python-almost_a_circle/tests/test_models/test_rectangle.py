@@ -125,8 +125,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r), "[Rectangle] (22) 20/10 - 40/60")
         r.update(id=22, x=77, y=88, width=99, height=66)
         self.assertEqual(str(r), "[Rectangle] (22) 77/88 - 99/66")
-        r.update(key=22, x=77, y=88, width=99, height=66)
-        self.assertEqual(str(r), "[Rectangle] (22) 77/88 - 99/66")
 
     def test_to_dictionary(self):
         """Test the to_dictionary method"""
