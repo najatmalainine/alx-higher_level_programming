@@ -116,6 +116,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r), "[Rectangle] (999) 20/1 - 40/60")
         r.update(999, 40, 60, 20, 10)
         self.assertEqual(str(r), "[Rectangle] (999) 20/10 - 40/60")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r.update(999, 40, 60, 20, "string")
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            r.update(999, 40, 60, 20, -99)
         """Test with **kwargs"""
         r.update(id=22)
         self.assertEqual(str(r), "[Rectangle] (22) 20/10 - 40/60")
