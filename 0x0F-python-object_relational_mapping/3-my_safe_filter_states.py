@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states with a name starting with N
+return matching states; safe from MySQL injections
 """
 import MySQLdb
 from sys import argv
