@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     result = cursor.fetchall()
 
-	# format the printing of cities of same state separated by commas
+# format the printing of cities of same state separated by commas
     print(', '.join(["{:s}".format(row[0]) for row in result]))
     cursor.close()
     conn.close()
