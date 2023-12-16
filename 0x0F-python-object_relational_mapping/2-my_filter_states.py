@@ -20,8 +20,8 @@ if __name__ == "__main__":
     cursor.execute("""
     SELECT *
     FROM states
-    WHERE name LIKE '{:s}' ORDER BY id ASC""".format(argv[4])
-    )
+    WHERE name LIKE '{:s}' ORDER BY id ASC""".format(argv[4]))
+
     result = cursor.fetchall()
 
     for row in result:
