@@ -18,8 +18,8 @@ if __name__ == "__main__":
     cursor = conn.cursor()
 
     query = """SELECT cities.id, cities.name, states.name
-    FROM states
-    INNER JOIN cities ON states.id = cities.state_id
+    FROM cities
+    JOIN states ON cities.state_id = states.id
     ORDER BY cities.id ASC"""
 
     cursor.execute(query)
